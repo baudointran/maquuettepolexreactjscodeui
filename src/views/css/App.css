@@ -1,0 +1,40 @@
+.marging-left-10 {
+  margin-left: 10%;
+}
+
+.historique_dossier tr th {
+  border-bottom: solid black;
+  padding: 5px 5px 5px 5px;
+}
+
+.menu-maquette-debug {
+  float: left;
+}
+/*
+#id_date {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  display: inline-block;
+}*/
+#id_date label {
+  width: 38%;
+  float: left;
+}
+#id_date input {
+  width: 60%;
+  float: left;
+}
+/*
+#id_check {
+  float: left;
+  display: inline-block;
+  width: 50%;
+}
+
+#id_comment {
+  float: left;
+  display: block;
+  width: 100%;
+}
+*/
