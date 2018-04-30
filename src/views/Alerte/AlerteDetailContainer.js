@@ -18,11 +18,15 @@ import "../css/App.css";
 export default class AlerteDetailContainer extends React.Component {
   render() {
     let infoAlert = [
+      { label: "Numero Aurige", value:"test"},
       { label: "Ecole", value: "Ecole-ABC" },
+      { label: "Adresse ecole", value:"test"},
       { label: "Centre", value: "0023" },
+      { label: "Adresse du Centre", value:"test"},
       { label: "Type", value: "Success Douteux" },
       { label: "Date", value: "17/04/2018" },
-      { label: "Departement", value: "93" }
+      { label: "Departement", value: "93" },
+      { label: "test", value:"test"}
     ];
 
     let listInfo = infoAlert.map(info => (
