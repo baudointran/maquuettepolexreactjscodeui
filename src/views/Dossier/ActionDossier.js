@@ -33,7 +33,7 @@ export default class ActionDossier extends React.Component {
         Label: "Dépot plainte",
         href: "#/DepotPlainte"
       }
-      //, { Label: "Clôture", href: "/"}
+      , { Label: "Clôture", href: "#/DossierDetail/1/Cloture"}
     ];
     let listAction = actions.map(action => (
       <Button href={action.href}>{action.Label}</Button>
@@ -53,7 +53,7 @@ export default class ActionDossier extends React.Component {
             */}
             {listAction}
 
-            <ButtonDropdown
+            {/* <ButtonDropdown
               direction="right"
               isOpen={this.state.btnDropright}
               toggle={() => {
@@ -77,8 +77,9 @@ export default class ActionDossier extends React.Component {
                   Mesure disciplaire{" "}
                 </DropdownItem>
               </DropdownMenu>
-            </ButtonDropdown>
-          </FormGroup>
+            </ButtonDropdown>*/}
+            
+          </FormGroup> 
         </Form>
       </div>
     );

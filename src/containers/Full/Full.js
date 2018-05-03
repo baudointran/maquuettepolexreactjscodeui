@@ -23,6 +23,7 @@ import FermetureRetrait from "../../views/Action/FermetureRetrait";
 
 import Parametre from "../../views/Administration/Parametre";
 import AnalyseContainer from "../../views/Analyse/AnalyseContainer";
+import ClotureContainer from "../../Views/Action/ClotureContainer";
 
 class Full extends Component {
   render() {
@@ -42,9 +43,11 @@ class Full extends Component {
                 component={AlerteDetailContainer}
               />
               <Route
-                path="/DossierDetailContainer"
+                exact path="/DossierDetail/:id"
                 component={DossierDetailContainer}
               />
+
+              <Route path="/DossierDetail/:id/Cloture" name="Cloture" component={ClotureContainer}/>
               <Route
                 path="/DossiersCurrent"
                 component={DossiersCurrent}
@@ -67,6 +70,7 @@ class Full extends Component {
                 path="/AnalyseContainer"
                 component={AnalyseContainer}
               />
+      
 
               <Redirect from="/" to="/dashboard"/>
               </Switch>

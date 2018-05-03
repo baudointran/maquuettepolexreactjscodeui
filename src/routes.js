@@ -3,7 +3,8 @@ const routes = {
   '/dashboard': 'Tableau de bord',
   '/DossiersCurrent': 'List des dossiers',
   '/AlerteDetailContainer': 'Détail d\'une alerte',
-  '/DossierDetailContainer' : 'Détail d\'un dossier',
+  '/DossierDetail/:id' : 'Détail d\'un dossier',
+  '/DossierDetail/:id/Cloture' : 'Cloture',
 
   '/DemandeInfo': 'Demande d\'infomartion',
   '/DeclencheControle': 'Controle',
@@ -11,7 +12,8 @@ const routes = {
   '/SansSuite': 'Sans Suite',
   '/Suspendre' : 'Suspendre',
   '/FermetureRetrait' : 'FermetureRetrait',
-'/Parametre': 'Parametres',
-                '/AnalyseContainer': 'Analyse'
+  '/Parametre': 'Parametres',
+  '/AnalyseContainer': 'Analyse'
+  
 };
 export default routes;

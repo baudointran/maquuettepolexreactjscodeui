@@ -34,11 +34,11 @@ export default class Example extends React.Component {
   }
   render() {
     let analyses = [
-      { id: "1", title: "AvsA" },
-      { id: "2", title: "AvsC" },
-      { id: "3", title: "Croisement AvsA x AvsC" },
+      { id: "1", title: "AvsA" , url:"http://viz.datalab.mi/views/PolEx/SurreussiteAvsA", filters:{ cenoa_dep_code: "95" }},
+      { id: "2", title: "AvsC" , url:"http://viz.datalab.mi/views/PolEx/SurreussiteAvsC"},
+      { id: "3", title: "Croisement AvsA x AvsC", url:"http://viz.datalab.mi/views/PolEx/Surreussitecroisee"  },
       { id: "4", title: "Progression fulgurante" },
-      { id: "5", title: "Réussite après changement de département" },
+      { id: "5", title: "Réussite après changement de département", url:"http://viz.datalab.mi/views/PolEx/Russiteaprschangementsdedpt" },
       { id: "6", title: "Différence kilométrique Auto-école <-> Centre" }
     ];
 
@@ -61,7 +61,7 @@ export default class Example extends React.Component {
       <TabPane tabId={analyse.id}>
         <Row>
           <Col sm="12">
-            <AVSAContainer title={analyse.title} />
+            <AVSAContainer title={analyse.title} url={analyse.url} params={analyse.params} />
           </Col>
         </Row>
       </TabPane>

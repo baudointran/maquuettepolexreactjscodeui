@@ -26,7 +26,7 @@ export default class AVSAContainer extends React.Component {
             <CardTitle>{title}</CardTitle>
           </CardHeader>
           <CardBody>
-            <ExempleTableau />
+            <ExempleTableau url={this.props.url} params={this.props.params}/>
           </CardBody>
         </Card>
       </div>

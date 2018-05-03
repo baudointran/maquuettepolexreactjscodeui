@@ -43,7 +43,8 @@
     "react-transition-group": "2.2.1",
     "reactstrap": "5.0.0-beta",
     "simple-line-icons": "2.4.1",
-    "react-tableau-report": "1.0.4"
+    "react-tableau-report": "1.0.4",
+    "tableau-api": "2.2.2"
   },
   "scripts": {
     "dev": "webpack -d --progress --watch --profile --json > compilation-stats.json --env.dev",

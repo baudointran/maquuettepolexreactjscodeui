@@ -2,30 +2,49 @@ import React from "react";
 import TableauReport from "react-tableau-report";
 //import AVSAContainer from "./AVSAContainer";
 import TabAnalyse from "./TabAnalyse";
+import {Card, CardBody} from 'reactstrap';
 
-const options = {
-  height: "400px",
-  width: "100%",
-  hideTabs: "false",
-  hideToolbar: "true"
-};
-
-const parameters = {
-  Param1: "Value",
-  Param2: "Other Value"
-};
-const filters = {
-  Age: "27 years old",
-  State: "Alaska"
-};
-
-const iframestyle = {
-  width: "100%",
-  height: "400px"
-};
+import tableau from "tableau-api";
 
 export default class AnalyseContainer extends React.Component {
+  // initTableau() {
+  //       const vizUrl =
+  //           "http://viz.datalab.mi/views/PolEx/SurreussiteAvsA";
+ 
+  //       const options = {
+  //           hideTabs: true,
+  //           width: "700px",
+  //           height: "800px",
+  //           onFirstInteractive: () => {
+  //               const sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Table");
+  //               const options = {
+  //                   ignoreAliases: false,
+  //                   ignoreSelection: false,
+  //                   includeAllColumns: false
+  //               };
+  //               sheet.getUnderlyingDataAsync(options).then((t) => {
+  //                   const tableauData = t.getData();
+  //                   let data = [];
+  //                   const pointCount = tableauData.length;
+  //                   for(let a = 0; a < pointCount; a++ ) {
+  //                       data = data.concat({
+  //                           x: tableauData[a][0].value,
+  //                           y: Math.round(tableauData[a][3].value,2)
+  //                       })
+  //                   };
+  //               })
+  //           }
+  //       };
+  //       this.container =  document.getElementById("testTableau");
+  //       let viz = new window.tableau.Viz(this.container, vizUrl, options)
+  //     }
+
+  //     componentDidMount(){
+  //       this.initTableau();
+  //     }
+
   render() {
+//    this.initTableau();
     return (
       <div>
         {/*        <AVSAContainer title="AvsA" />
@@ -37,9 +56,14 @@ export default class AnalyseContainer extends React.Component {
 */}
         <TabAnalyse />
 
-        <a href="https://public.tableau.com/fr-fr/s/gallery">
+        {/* <a href="https://public.tableau.com/fr-fr/s/gallery">
           Voir detail dans tableau
-        </a>
+        </a> */}
+        {/* <Card>
+          <CardBody>
+        <div id="testTableau"></div>
+        </CardBody>
+        </Card> */}
       </div>
     );
   }

@@ -21,7 +21,10 @@ export default {
     },{
        name: 'Paramêtre',
       url: '/Parametre'
-
+    },
+    {
+      name:'Lien Tableau',
+      url:'http://viz.datalab.mi/#/views/PolEx/Glossaire?:iid=156'
     }
   ]
 };

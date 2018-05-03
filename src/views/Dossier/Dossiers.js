@@ -12,10 +12,12 @@ export default class Dossiers extends React.Component {
       { id:1, Dossier: "Dossier_23", Date: "17/04/2018" },
       { id:2, Dossier: "Dossier_24", Date: "17/04/2018" }
     ];
-    let listDossier = dossiers.map(dossier => (
+    let listDossier = dossiers.map(function(dossier){
+      let href = "#/DossierDetail/"+ dossier.id;
+      return (
       <ListGroupItem key={dossier.id}>
         <Row>
-          <Col xs="4"><a href="#/DossierDetailContainer">{dossier.Dossier}</a></Col>
+          <Col xs="4"><a href={href}>{dossier.Dossier}</a></Col>
           <Col xs="4">{dossier.Date}</Col>
         {/*  <Col xs="4">
             <Button className="creerDossier">
@@ -31,7 +33,7 @@ export default class Dossiers extends React.Component {
           */}
         </Row>
       </ListGroupItem>
-    ));
+    );});
     return (
       <div>
         <ListGroup>

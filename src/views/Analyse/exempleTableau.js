@@ -4,14 +4,15 @@ import TableauReport from "react-tableau-report";
 const options = {
   height: "400px",
   width: "100%",
-  hideTabs: "false",
-  hideToolbar: "true"
+  hideTabs: "true",
+  hideToolbar: "true",
+
 };
 
-const parameters = {
-  Param1: "Value",
-  Param2: "Other Value"
-};
+// const parameters = {
+//   Param1: "Value",
+//   Param2: "Other Value"
+// };
 const filters = {
   Age: "27 years old",
   State: "Alaska"
@@ -23,12 +24,25 @@ const iframestyle = {
 };
 
 export default class ExempleTableau extends React.Component {
+
   render() {
+
+    //let url = "https://public.tableau.com/views/PremiumsandTaxCreditsUndertheAffordableCareActACAvsSenateBetterCareReconciliationActBCRA/Dashboard1";
+
+    let url = this.props.url; 
+    let filtersTmp=this.props.filters;
+    if(url == undefined){
+        url = "https://public.tableau.com/views/PremiumsandTaxCreditsUndertheAffordableCareActACAvsSenateBetterCareReconciliationActBCRA/Dashboard1";
+      filtersTmp =filters; 
+    }
+    let params = this.props.params;
+
     return (
       <TableauReport
-        url="https://public.tableau.com/views/PremiumsandTaxCreditsUndertheAffordableCareActACAvsSenateBetterCareReconciliationActBCRA/Dashboard1"
+        url={url} 
         options={options}
-        filters={filters}
+        parameters={params}
+        filters={filtersTmp}
       />
     );
   }
